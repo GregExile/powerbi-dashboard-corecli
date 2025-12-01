@@ -1,4 +1,9 @@
-/* LOGIN deve continuar centralizado */
+/* 🔒 GARANTE QUE QUALQUER COISA COM .hidden NÃO APARECE */
+.hidden {
+    display: none !important;
+}
+
+/* LOGIN – deve continuar centralizado */
 body {
     font-family: Arial, sans-serif;
     background: #f1f1f1;
@@ -10,7 +15,7 @@ body {
     height: 100vh;
 }
 
-/* Mantém o box do login igual estava */
+/* Caixa do login */
 .box {
     background: #fff;
     padding: 25px;
@@ -20,21 +25,30 @@ body {
     text-align: center;
 }
 
-/* 🔥 ESTA É A PARTE NOVA: Dashboard ocupa a largura total */
-#dashboard-box {
-    width: 100%;
-    max-width: 1200px;   /* limita para não ficar gigante */
-    margin: 40px auto;   /* tira o centralizado forçado */
-    text-align: center;
+/* CAMPOS DO LOGIN */
+input {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
 }
 
-/* iframe ajustado para ficar "padrão Power BI" */
-iframe {
-    width: 100%;
-    height: 85vh;    /* ocupa 85% da tela, sem ficar enorme */
-    border-radius: 8px;
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0078ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
-/* DASHBOARD FULLSCREEN */
+
+button:hover {
+    background: #005cd1;
+}
+
+/* ---------- DASHBOARD FULLSCREEN ---------- */
 .dashboard-full {
     position: fixed;
     top: 0;
@@ -43,12 +57,14 @@ iframe {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: #ffffff; /* fundo limpo */
+    background: #ffffff;
     overflow: hidden;
 }
 
+/* iframe ocupa a tela inteira de forma segura */
 .dashboard-full iframe {
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 0;
 }
