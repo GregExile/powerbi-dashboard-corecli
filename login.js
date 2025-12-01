@@ -5,7 +5,7 @@ function login() {
 
     // 🔐 USUÁRIO E SENHA DEFINIDOS POR VOCÊ
     const USER = "admin";
-    const PASS = "1234";
+    const PASS = "crypta-umbriq_77_vault";
 
     if (user === USER && pass === PASS) {
         document.getElementById("login-box").classList.add("hidden");
