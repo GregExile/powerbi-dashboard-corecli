@@ -1,52 +1,36 @@
+/* LOGIN deve continuar centralizado */
 body {
     font-family: Arial, sans-serif;
     background: #f1f1f1;
     margin: 0;
-    padding: 40px 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    min-height: 100vh; /* Permite rolar quando o iframe for grande */
+    align-items: center;
+    height: 100vh;
 }
 
+/* Mantém o box do login igual estava */
 .box {
     background: #fff;
     padding: 25px;
-    width: 90%;
-    max-width: 700px; /* Para o dashboard ficar maior sem estourar */
+    width: 350px;
     border-radius: 10px;
     box-shadow: 0 0 10px #ccc;
     text-align: center;
 }
 
-.hidden {
-    display: none;
-}
-
-input {
-    width: 90%;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #aaa;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #0078ff;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #005cd1;
-}
-
-iframe {
-    margin-top: 20px;
-    border-radius: 8px;
+/* 🔥 ESTA É A PARTE NOVA: Dashboard ocupa a largura total */
+#dashboard-box {
     width: 100%;
-    height: 700px;
+    max-width: 1200px;   /* limita para não ficar gigante */
+    margin: 40px auto;   /* tira o centralizado forçado */
+    text-align: center;
+}
+
+/* iframe ajustado para ficar "padrão Power BI" */
+iframe {
+    width: 100%;
+    height: 85vh;    /* ocupa 85% da tela, sem ficar enorme */
+    border-radius: 8px;
 }
